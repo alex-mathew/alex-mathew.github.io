@@ -1,0 +1,8 @@
+.dontPrint {
+    display: none;
+}
+.print {
+    display: block;
+}
+
+@page { margin:0 }

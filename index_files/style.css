@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400;700');
+@import url('https://everythingfonts.com/font/face/S38OFGypEeKuYlDlSVDSjg');
+
+.dontPrint {
+  display: block;
+}
+.print {
+  display: none;
+}
+/* ---------------------------------------------- begin align ---------------------------------------------- */
+/* horizontal centering */
+.horiz-center {
+  margin: 0 auto;
+}
+/* vertical centering */
+.vert-center-parent {
+  position: relative;
+}
+.vert-center-child {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* 2d centering */
+.twod-center-parent {
+  position: relative;
+}
+.twod-center-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ---------------------------------------------- end align ---------------------------------------------- */
+
+/* ---------------------------------------------- begin body ---------------------------------------------- */
+body {
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif;
+  background-color: #130b0b;
+}
+/* ----------------------------------------------- end body ----------------------------------------------- */
+
+/* ------------------------------------------- begin navigation ------------------------------------------- */
+.navbar {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .9rem;
+  letter-spacing: .1rem;
+  background: rgba(0, 0, 0, 0)!important;
+}
+.navbar-nav li {
+  padding-right: .7rem;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: #666;
+  padding-top: .8rem;
+}
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #fdf6e3;
+}
+/* -------------------------------------------- end navigation -------------------------------------------- */
+
+/* ---------------------------------------------- begin home ---------------------------------------------- */
+/* ---------------------------------------- begin stars background ---------------------------------------- */
+.landing {
+  background-color: black;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: table;
+  z-index: -1;
+}
+@keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+.stars, .twinkling {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+.stars {
+  background:#000 url(img/stars.png) repeat top center;
+  z-index:0;
+}
+.twinkling{
+  background:transparent url(img/twinkling.png) repeat top center;
+  z-index:0;
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
+/* ----------------------------------------- end stars background ----------------------------------------- */
+/* ---------------------------------------------- start i am x -------------------------------------------- */
+.home-inner {
+  background-image: url(img/bg.png);
+  font-size: 3.5em;
+  font: 900 15vmin/15vh cookie, cursive;
+  z-index: 0;
+  position: absolute;
+  color:#fdf6e3;
+  font-family:inherit;
+  position: fixed;
+  display: table;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+.home-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.txt-rotate {
+  color:orange;
+}
+/* ---------------------------------------------- end i am x ---------------------------------------------- */
+/* ---------------------------------------------- end home ------------------------------------------------ */
+
+footer {
+  padding: 2rem 0 2rem;
+  margin-top: 0rem;
+}
+
+svg.svg-inline--fa {
+  font-size: 2rem;
+  margin: 1.2rem .5rem 0 0;
+  color:rgba(0, 0, 0, 0.7);
+}
+
+.narrow-about {
+  width: 85%;
+  margin: 1.5rem auto;
+  padding-top: 0rem;
+}
+
+.css-typing {
+    width: 30em;
+    white-space:nowrap;
+    overflow:hidden;
+    -webkit-animation: type 5s steps(40, end);
+    animation: type 5s steps(40, end);
+}
+
+@keyframes type{
+    from { width: 0; }
+}
+
+@-webkit-keyframes type{
+    from { width: 0; }
+}
+
+/* ------------------------------------------- begin career ------------------------------------------- */
+.more-trigger {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  z-index: 2;
+  opacity: 0.75;
+  line-height: 1;
+  padding: 8px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0);
+}
+.timeline-container {
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.timeline-container::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+.timeliner {
+  position: relative;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 2em 0;
+}
+.timeliner::before {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  width: 4px;
+  height: 100%;
+  content: '';
+  background: #fdf6e3;
+}
+@media only screen and (min-width: 1170px) {
+  .timeliner {
+      margin-top: 3em;
+      margin-bottom: 3em;
+  }
+  .timeliner::before {
+      left: 50%;
+      margin-left: -2px;
+  }
+}
+.timeline-block {
+  position: relative;
+  clear: both;
+  margin: 2em 0;
+}
+.timeline-block:first-child {
+  margin-top: 0;
+}
+.timeline-block:last-child {
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 1170px) {
+  .timeline-block {
+      margin: 4em 0;
+  }
+  .timeline-block:first-child {
+      margin-top: 0;
+  }
+  .timeline-block:last-child {
+      margin-bottom: 0;
+  }
+}
+.timeline-content {
+  position: relative;
+  clear: both;
+  margin-left: 60px;
+  padding: 1em;
+  border-radius: .25em;
+  background: #fdf6e3;
+  box-shadow: 0 3px 0 #fdf6e3;
+  color: rgba(0, 0, 0, 0.7);
+}
+.timeline-content h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #333;
+}
+.timeline-content .cd-date,
+.timeline-content .cd-read-more,
+.timeline-content p {
+  font-size: 14px;
+  color: #666;
+}
+.timeline-content,
+.timeline-content .cd-date,
+.timeline-content .cd-read-more {
+  display: inline-block
+}
+.timeline-content p {
+  line-height: 1.6;
+  margin: 1em 0;
+  color: #666;
+}
+.timeline-content .cd-date {
+  float: left;
+  padding: .8em 0;
+  opacity: .7;
+  color: #666;
+}
+.timeline-content::before {
+  position: absolute;
+  top: 16px;
+  right: 100%;
+  width: 0;
+  height: 0;
+  content: '';
+  border: 7px solid transparent;
+  border-right: 7px solid #fdf6e3;
+  color: #666;
+}
+@media only screen and (min-width: 768px) {
+  .timeline-content h2 {
+      font-size: 18px
+  }
+  .timeline-content p {
+      font-size: 14px;
+      color: #666
+  }
+  .timeline-content .cd-date,
+  .timeline-content .cd-read-more {
+      font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .timeline-content {
+      width: 45%;
+      margin-left: 0;
+      padding: 1.6em;
+  }
+  .timeline-content::before {
+      top: 24px;
+      left: 100%;
+      border-color: transparent transparent transparent #fdf6e3;
+  }
+  .timeline-content .cd-date {
+      font-size: 16px;
+      position: absolute;
+      top: 6px;
+      left: 122%;
+      width: 100%;
+  }
+  .timeline-block:nth-child(even) .timeline-content,
+  .timeline-block:nth-child(even) .timeline-content .cd-read-more {
+      float: right;
+  }
+  .timeline-block:nth-child(even) .timeline-content::before {
+      top: 24px;
+      right: 100%;
+      left: auto;
+      border-color: transparent #fdf6e3 transparent transparent;
+  }
+  .timeline-block:nth-child(even) .timeline-content .cd-date {
+      right: 122%;
+      left: auto;
+      text-align: right;
+  }
+  .cssanimations .timeline-content.is-hidden {
+      visibility: hidden;
+  }
+  .cssanimations .timeline-content.bounce-in {
+      visibility: visible;
+  }
+}
+/* ------------------------------------------- end career ------------------------------------------- */
+
+/* ---------------------------------------- begin opensource ---------------------------------------- */
+#opensource {
+  width:100%;
+  height:calc(100vh);
+  overflow-y:auto;
+}
+
+ul.wcloud {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  line-height: 3.75rem;
+}
+ul.wcloud a {
+  /*opacity: calc((15 - (9 - var(--size))) / 15);*/
+  --size: 5;
+  font-family: 'BeonRegular'; 
+  font-size: calc(var(--size) * 0.25rem + 1.5rem);
+  display: block;
+  padding: 0.125rem 0.25rem;
+  position: relative;
+  text-decoration: none;
+  color: #fdf6e3;
+  /* text with stencil over image effect */
+  /*
+  background-image: url('https://eskipaper.com/images/graffiti-wallpaper-7.jpg');
+  background-attachment: fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  */
+}
+ul.wcloud a[data-weight="1"] { --size: 1;}
+ul.wcloud a[data-weight="2"] { --size: 2;}
+ul.wcloud a[data-weight="3"] { --size: 3;}
+ul.wcloud a[data-weight="4"] { --size: 4;}
+ul.wcloud a[data-weight="5"] { --size: 6;}
+ul.wcloud a[data-weight="6"] { --size: 8;}
+ul.wcloud a[data-weight="7"] { --size: 10;}
+ul.wcloud a[data-weight="8"] { --size: 13;}
+ul.wcloud a[data-weight="9"] { --size: 16;}
+ul[data-show-value] a::after {
+  content: " (" attr(data-weight) ")";
+  font-size: 1rem;
+}
+
+ul.wcloud a:hover {
+  text-shadow:
+    0 0 7px #faed27,
+    0 0 10px #faed27,
+    0 0 21px #faed27;
+}
+
+ul.wcloud a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  background: var(--color);
+  transform: translate(-50%, 0);
+  opacity: 0.15;
+  transition: width 0.25s;
+}
+ul.wcloud a:focus::before,
+ul.wcloud a:hover::before {
+  width: 100%;
+}
+@media (prefers-reduced-motion) {
+  ul.wcloud * {
+    transition: none !important;
+  }
+}
+/* ---------------------------------------- end opensource ---------------------------------------- */
+
+#footer { padding: 65px 0 50px; text-align: center; font-weight: 300; }
+#footer ul { list-style: none; }
+#footer ul li { display: inline-block; min-width: 50px; min-height: 75px; margin: 0 0px; padding: 0 0px; position: relative; }
+
+/*--- Extra Bootstrap Column Padding --*/
+[class*="col-"] {
+  padding: 1rem;
+}
+
+/*--- Bootstrap Mobile Gutter Fix --*/
+.row, .container-fluid {
+margin-left: 0px!important;
+margin-right: 0px!important;
+}
+
+
+
+
+
+
+
+
+h3 {
+  position: relative;
+  left: 45%;
+}
+
+/* THE FRONT */
+.front {
+  background-image: url(img/card-front.png);
+  background-size: cover;
+}
+
+/* /end */
+/* THE BACK */
+.back {
+  background-image: url(img/card-back.png);
+  background-size: cover;
+}
+.back h1, .back p, .back .font-a-icons {
+  color: #000;
+  font-family: "Lato";
+  margin-left: 30%;
+  line-height: 90%;
+}
+.back h1 {
+  margin-top: 5%;
+}
+.back p {
+  font-size: 16px;
+  padding-bottom: 15px;
+  width: 35%;
+  border-bottom: 2px solid #000;
+}
+.back .bold {
+  font-weight: bold;
+}
+.back .font-a-icons {
+  margin-top: 25px;
+}
+.back .font-a-icons .icon-group {
+  margin-top: 8px;
+}
+.back .font-a-icons span, .back .font-a-icons .link, .back .font-a-icons .fa, .back .font-a-icons a {
+  color: #000;
+}
+.back .font-a-icons .fa {
+  font-size: 18px;
+}
+.back .font-a-icons span, .back .font-a-icons a {
+  font-size: 16px;
+}
+.back .font-a-icons a, .back .font-a-icons .website {
+  text-decoration: none;
+}
+.back .font-a-icons a:hover, .back .font-a-icons .website:hover {
+  color: #3f3f3f;
+}
+.back .icon-box {
+  position: relative;
+  color: #000;
+  font-size: 24px;
+  height: 45px;
+  width: 45px;
+  padding: 5px;
+  top: 75px;
+  left: 30%;
+  display: inline-block;
+  border: 2px solid #000;
+  margin: 5px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+.back .icon-box:hover {
+  box-shadow: inset 0 50px 0 0 #000;
+  color: #fff;
+}
+
+/* /end */
+/* THE FLIP EFFECT */
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000px;
+}
+
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+.flip-container, .front, .back {
+  height: 350px;
+  width: 600px;
+}
+
+.flipper {
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+.front {
+  z-index: 2;
+  /* firefox 31 */
+  transform: rotateY(0deg);
+}
+
+.back {
+  background-color: #000;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.vertical.flip-container {
+  position: relative;
+}
+
+.vertical .back {
+  transform: rotateX(180deg);
+}
+
+.vertical.flip-container .flipper {
+  transform-origin: 100% 400x;
+}
+
+.vertical.flip-container:hover .flipper {
+  transform: rotateX(-180deg);
+}
