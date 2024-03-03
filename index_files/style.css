@@ -114,7 +114,6 @@ body {
 /* ----------------------------------------- end stars background ----------------------------------------- */
 /* ---------------------------------------------- start i am x -------------------------------------------- */
 .home-inner {
-  background-image: url(img/bg.png);
   font-size: 3.5em;
   font: 900 15vmin/15vh cookie, cursive;
   z-index: 0;
@@ -143,6 +142,29 @@ body {
 }
 .txt-rotate {
   color:orange;
+}
+.neonText {
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+}
+
+h1 {
+  font-size: 3.0rem;    
+}
+
+/* Flickering animation */
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
 }
 /* ---------------------------------------------- end i am x ---------------------------------------------- */
 /* ---------------------------------------------- end home ------------------------------------------------ */
